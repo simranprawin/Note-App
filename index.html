@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NoteNest | Notes App</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="app-container">
+    <header class="app-header">
+      <div>
+        <p class="eyebrow">PERSONAL ORGANIZER</p>
+        <h1>NoteNest</h1>
+        <p class="subtitle">Keep your ideas organized and easy to find.</p>
+      </div>
+
+      <div class="header-icon">📝</div>
+    </header>
+
+    <section class="toolbar">
+      <div class="search-box">
+        <span>🔍</span>
+        <input
+          id="searchInput"
+          type="search"
+          placeholder="Search your notes..."
+        />
+      </div>
+
+      <button id="clearAllButton" class="clear-button" type="button">
+        Clear All
+      </button>
+    </section>
+
+    <section class="note-form-card">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">CREATE NOTE</p>
+          <h2 id="formTitle">Add a new note</h2>
+        </div>
+
+        <span class="form-icon">✦</span>
+      </div>
+
+      <form id="noteForm">
+        <label for="noteTitle">Note title</label>
+        <input
+          id="noteTitle"
+          type="text"
+          placeholder="Example: Study plan"
+          maxlength="80"
+          required
+        />
+
+        <label for="noteContent">Note content</label>
+        <textarea
+          id="noteContent"
+          placeholder="Write your note here..."
+          maxlength="500"
+          required
+        ></textarea>
+
+        <div class="form-actions">
+          <button id="saveButton" class="primary-button" type="submit">
+            Add Note
+          </button>
+
+          <button
+            id="cancelButton"
+            class="secondary-button hidden"
+            type="button"
+          >
+            Cancel
+          </button>
+        </div>
+      </form>
+    </section>
+
+    <section class="notes-section">
+      <div class="notes-heading">
+        <div>
+          <p class="eyebrow">YOUR COLLECTION</p>
+          <h2>Your Notes</h2>
+        </div>
+
+        <span id="noteCount" class="note-count">0 notes</span>
+      </div>
+
+      <div id="notesContainer" class="notes-container"></div>
+
+      <div id="emptyState" class="empty-state">
+        <div class="empty-icon">📚</div>
+        <h3>No notes yet</h3>
+        <p>Create your first note to get started.</p>
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
